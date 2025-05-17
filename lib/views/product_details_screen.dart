@@ -53,61 +53,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                           fit: BoxFit.cover,
                         ),
                       ),
-                      child: Stack(
-                        children: [
-                          // Discount Badge
-                          Positioned(
-                            top: 16,
-                            left: 16,
-                            child: Container(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 12, vertical: 6),
-                              decoration: BoxDecoration(
-                                color: CupertinoColors.systemRed,
-                                borderRadius: BorderRadius.circular(4),
-                              ),
-                              child: const Text(
-                                "20% OFF",
-                                style: TextStyle(
-                                  color: CupertinoColors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 12,
-                                ),
-                              ),
-                            ),
-                          ),
-
-                          // Favorite Button
-                          Positioned(
-                            top: 16,
-                            right: 16,
-                            child: Container(
-                              width: 36,
-                              height: 36,
-                              decoration: BoxDecoration(
-                                color: CupertinoColors.white,
-                                shape: BoxShape.circle,
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.black.withOpacity(0.1),
-                                    blurRadius: 8,
-                                    offset: const Offset(0, 2),
-                                  ),
-                                ],
-                              ),
-                              child: const Center(
-                                child: Icon(
-                                  CupertinoIcons.heart,
-                                  size: 20,
-                                  color: CupertinoColors.systemGrey,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
                     ),
-
                     // Product Info
                     Padding(
                       padding: const EdgeInsets.all(20.0),
@@ -124,59 +70,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                               height: 1.3,
                             ),
                           ),
-
                           const SizedBox(height: 8),
-
-                          // Rating
-                          Row(
-                            children: [
-                              const Icon(
-                                CupertinoIcons.star_fill,
-                                color: Color(0xFFFFC107),
-                                size: 16,
-                              ),
-                              const Icon(
-                                CupertinoIcons.star_fill,
-                                color: Color(0xFFFFC107),
-                                size: 16,
-                              ),
-                              const Icon(
-                                CupertinoIcons.star_fill,
-                                color: Color(0xFFFFC107),
-                                size: 16,
-                              ),
-                              const Icon(
-                                CupertinoIcons.star_fill,
-                                color: Color(0xFFFFC107),
-                                size: 16,
-                              ),
-                              const Icon(
-                                CupertinoIcons.star_lefthalf_fill,
-                                color: Color(0xFFFFC107),
-                                size: 16,
-                              ),
-                              const SizedBox(width: 6),
-                              Text(
-                                "4.5",
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w600,
-                                  color: CupertinoColors.black.withOpacity(0.7),
-                                ),
-                              ),
-                              const SizedBox(width: 12),
-                              Text(
-                                "(125 Reviews)",
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  color: CupertinoColors.black.withOpacity(0.5),
-                                ),
-                              ),
-                            ],
-                          ),
-
-                          const SizedBox(height: 16),
-
                           // Price Section
                           Row(
                             crossAxisAlignment: CrossAxisAlignment.end,
@@ -189,57 +83,15 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                                   color: CupertinoColors.activeBlue,
                                 ),
                               ),
-                              const SizedBox(width: 8),
-                              Text(
-                                "\$${(double.parse(widget.product.price.toString()) * 1.2).toStringAsFixed(2)}",
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w400,
-                                  color: CupertinoColors.systemGrey,
-                                  decoration: TextDecoration.lineThrough,
-                                ),
-                              ),
-                              const Spacer(),
-                              Container(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 10, vertical: 5),
-                                decoration: BoxDecoration(
-                                  color: CupertinoColors.activeGreen
-                                      .withOpacity(0.1),
-                                  borderRadius: BorderRadius.circular(4),
-                                ),
-                                child: const Row(
-                                  children: [
-                                    Icon(
-                                      CupertinoIcons.checkmark_circle,
-                                      color: CupertinoColors.activeGreen,
-                                      size: 14,
-                                    ),
-                                    SizedBox(width: 4),
-                                    Text(
-                                      "In Stock",
-                                      style: TextStyle(
-                                        color: CupertinoColors.activeGreen,
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 12,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
                             ],
                           ),
-
                           const SizedBox(height: 24),
-
                           // Divider
                           Container(
                             height: 1,
                             color: CupertinoColors.systemGrey5,
                           ),
-
                           const SizedBox(height: 24),
-
                           // Description Header
                           const Text(
                             "Description",
@@ -249,9 +101,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                               color: CupertinoColors.black,
                             ),
                           ),
-
                           const SizedBox(height: 12),
-
                           // Description
                           Text(
                             "${widget.product.description}",
@@ -261,60 +111,6 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                               color: CupertinoColors.black.withOpacity(0.7),
                             ),
                           ),
-
-                          const SizedBox(height: 24),
-
-                          // Features
-                          Container(
-                            padding: const EdgeInsets.all(16),
-                            decoration: BoxDecoration(
-                              color: CupertinoColors.systemGrey6,
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                const Text(
-                                  "Highlights",
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w600,
-                                    color: CupertinoColors.black,
-                                  ),
-                                ),
-                                const SizedBox(height: 12),
-                                _buildFeatureItem("Premium Quality"),
-                                _buildFeatureItem("Fast Shipping"),
-                                _buildFeatureItem("30-Day Returns"),
-                                _buildFeatureItem("Secure Checkout"),
-                              ],
-                            ),
-                          ),
-
-                          const SizedBox(height: 32),
-
-                          // Add to Cart Button
-                          SizedBox(
-                            width: double.infinity,
-                            child: CupertinoButton(
-                              padding: const EdgeInsets.symmetric(vertical: 16),
-                              color: CupertinoColors.activeBlue,
-                              borderRadius: BorderRadius.circular(8),
-                              child: const Text(
-                                "Add to Cart",
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w600,
-                                  color: CupertinoColors.white,
-                                ),
-                              ),
-                              onPressed: () {
-                                // Add to cart functionality
-                              },
-                            ),
-                          ),
-
-                          const SizedBox(height: 32),
                         ],
                       ),
                     ),

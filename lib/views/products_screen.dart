@@ -142,61 +142,6 @@ class _ProductsScreenState extends State<ProductsScreen> {
                                       image: NetworkImage(product.thumbnail),
                                     ),
                                   ),
-                                  child: Stack(
-                                    children: [
-                                      if (index % 3 == 0)
-                                        Positioned(
-                                          top: 8,
-                                          left: 8,
-                                          child: Container(
-                                            padding: const EdgeInsets.symmetric(
-                                              horizontal: 8,
-                                              vertical: 4,
-                                            ),
-                                            decoration: BoxDecoration(
-                                              color: CupertinoColors.systemRed,
-                                              borderRadius:
-                                                  BorderRadius.circular(4),
-                                            ),
-                                            child: const Text(
-                                              'SALE',
-                                              style: TextStyle(
-                                                color: CupertinoColors.white,
-                                                fontSize: 10,
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      Positioned(
-                                        top: 8,
-                                        right: 8,
-                                        child: Container(
-                                          width: 30,
-                                          height: 30,
-                                          decoration: BoxDecoration(
-                                            color: CupertinoColors.white,
-                                            shape: BoxShape.circle,
-                                            boxShadow: [
-                                              BoxShadow(
-                                                color:
-                                                    CupertinoColors.systemGrey5,
-                                                blurRadius: 4,
-                                                offset: const Offset(0, 2),
-                                              ),
-                                            ],
-                                          ),
-                                          child: Center(
-                                            child: Icon(
-                                              CupertinoIcons.heart,
-                                              size: 16,
-                                              color: CupertinoColors.systemGrey,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
                                 ),
                               ),
 
@@ -220,7 +165,6 @@ class _ProductsScreenState extends State<ProductsScreen> {
                                         ),
                                       ),
                                       const SizedBox(height: 5),
-
                                       // Price
                                       Text(
                                         '\$${product.price}',
@@ -229,29 +173,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
                                           fontWeight: FontWeight.bold,
                                           color: CupertinoColors.activeBlue,
                                         ),
-                                      ),
-
-                                      const Spacer(),
-
-                                      // Rating
-                                      Row(
-                                        children: [
-                                          Icon(
-                                            CupertinoIcons.star_fill,
-                                            size: 12,
-                                            color: const Color(0xFFFFC107),
-                                          ),
-                                          const SizedBox(width: 4),
-                                          Text(
-                                            '${(index % 5 + 3.0).toStringAsFixed(1)}',
-                                            style: TextStyle(
-                                              fontSize: 12,
-                                              color: CupertinoColors.black
-                                                  .withOpacity(0.6),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
+                                      ), // Rating
                                     ],
                                   ),
                                 ),

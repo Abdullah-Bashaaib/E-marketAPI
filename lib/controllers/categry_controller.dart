@@ -30,19 +30,4 @@ class ApiService {
       throw Exception('خطأ: $e');
     }
   }
-
-  // Future<List<CategoryModel>> fetchCategoriesWithUrl() async {
-  //   final response =
-  //       await http.get(Uri.parse('https://dummyjson.com/products/categories'));
-
-  //   if (response.statusCode == 200) {
-  //     List<dynamic> jsonData = List.from(json.decode(response.body));
-  //     return jsonData
-  //         .map((data) => CategoryModel.fromJson(
-  //             {'name': data['name'], 'slug': data['slug'], 'url': data['url']}))
-  //         .toList();
-  //   } else {
-  //     throw Exception('Failed to load categories');
-  //   }
-  // }
 }
